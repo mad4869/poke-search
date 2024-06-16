@@ -6,7 +6,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <div>
       <Header />
-      <main className="min-h-[calc(100dvh-7rem)] py-4 px-16 flex justify-center items-center">
+      <main className="min-h-[calc(100dvh-7rem)] py-4 px-4 sm:px-16 flex justify-center items-center">
         {children}
       </main>
       <Footer />

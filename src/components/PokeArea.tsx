@@ -15,7 +15,7 @@ const PokeArea = () => {
     )
 
     return (
-        <div className="container flex flex-col items-center justify-between gap-8">
+        <div className="container flex flex-col items-center justify-center gap-8 py-12 lg:py-0 lg:gap-24">
             <PokeSearchBar setSelectedPokemon={setSelectedPokemon} />
             <PokeDisplay
                 pokemons={pokemons}

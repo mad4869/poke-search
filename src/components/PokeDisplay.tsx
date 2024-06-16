@@ -19,7 +19,7 @@ const PokeDisplay: React.FC<PokeDisplayProps> = ({
     pokemons, pokemon, prevUrl, nextUrl, isListLoading, isDetailLoading, setCurrentUrl, setSelectedPokemon
 }) => {
     return (
-        <div className="flex items-center justify-between w-full overflow-y-hidden h-72">
+        <div className="flex items-center justify-between w-full min-h-72 lg:h-72">
             {!pokemon &&
                 <FaCircleArrowLeft
                     type="button"
@@ -32,7 +32,7 @@ const PokeDisplay: React.FC<PokeDisplayProps> = ({
                     <AiOutlineLoading3Quarters className="text-4xl text-primary animate-spin" />
                 </div>
             }
-            {(!pokemon && !isDetailLoading) && <div className="grid grid-flow-col grid-rows-4 gap-x-16 gap-y-8">
+            {(!pokemon && !isDetailLoading) && <div className="grid grid-flow-col grid-rows-10 sm:grid-rows-8 sm:gap-x-4 md:gap-x-16 lg:grid-rows-4 gap-y-8">
                 {(!isListLoading && !pokemons) && <p className="text-2xl text-primary">No Pokemon Found</p>}
                 {(!isListLoading && pokemons) && pokemons.map((pokemon) => (
                     <PokeCard key={pokemon.name} pokemonName={pokemon.name} selectPokemon={setSelectedPokemon} />

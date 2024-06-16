@@ -9,8 +9,8 @@ type PokeDetailProps = {
 
 const PokeDetail: React.FC<PokeDetailProps> = ({ pokemon, selectPokemon }) => {
     return (
-        <div className="flex items-center justify-between flex-1 px-24">
-            <div className="flex justify-center gap-8 flex-[0.7]">
+        <div className="flex flex-col items-center justify-center flex-1 gap-12 lg:px-16 xl:px-24 lg:gap-0 lg:justify-between lg:flex-row">
+            <div className="flex justify-center gap-8 flex-[0.7] order-2 lg:order-1">
                 <div className="flex flex-col items-center">
                     <h3 className="px-4 py-1 text-lg font-bold text-white rounded-md bg-primary">Abilities</h3>
                     <ul className="list-disc">
@@ -32,14 +32,14 @@ const PokeDetail: React.FC<PokeDetailProps> = ({ pokemon, selectPokemon }) => {
                     </ul>
                 </div>
             </div>
-            <div className="flex flex-col items-center justify-between flex-1">
+            <div className="flex flex-col items-center justify-between flex-1 order-1 lg:order-2">
                 <img
                     src={pokemon.sprites.front_default}
                     alt={pokemon.name}
                     className="w-48 h-48" />
                 <h2 className="text-4xl font-bold text-primary">{toTitleCase(pokemon.name)}</h2>
             </div>
-            <div className="flex-[0.7] text-center">
+            <div className="flex-[0.7] text-center order-last">
                 <button
                     title="Back to Pokemon List"
                     className="px-4 py-2 text-white rounded-md shadow-md bg-primary hover:bg-primary/90"

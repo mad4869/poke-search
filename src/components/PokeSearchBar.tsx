@@ -16,16 +16,16 @@ const PokeSearchBar: React.FC<PokeSearchBarProps> = ({ setSelectedPokemon }) => 
     };
 
     return (
-        <div className="flex items-center justify-center overflow-hidden border border-primary/50 rounded-lg w-[32rem] h-16">
+        <div className="flex items-center justify-center overflow-hidden border border-primary/50 rounded-lg sm:w-[32rem] h-12 sm:h-16">
             <input
                 type="text"
                 placeholder="Your favorite pokemon..."
-                className="flex-1 px-4 py-1 text-2xl font-bold text-primary focus:outline-none placeholder:text-primary/50 placeholder:font-normal"
+                className="flex-1 px-4 py-1 font-bold sm:text-2xl text-primary focus:outline-none placeholder:text-primary/50 placeholder:font-normal"
                 onChange={(e) => setInputValue(e.target.value.toLowerCase())}
                 onKeyDown={handleEnter} />
             <button
                 title="Search Pokemon"
-                className="h-full px-4 text-2xl text-white rounded-l-lg bg-primary"
+                className="h-full px-4 text-lg text-white rounded-l-lg sm:text-2xl bg-primary"
                 onClick={() => setSelectedPokemon(inputValue)}>
                 <FaSearchengin />
             </button>
